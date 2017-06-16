@@ -1,0 +1,61 @@
+header,
+main,
+figure{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background: #fff;
+}
+.wrapper{
+    max-width: 963px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    width: 100%;
+    background: #000;
+}
+header .wrapper{
+    padding: 16px 0 20px 0;
+}
+.logo, a.link1, a.link2{
+    font-size: 20px;
+    color: #fff;
+    padding: 11px;
+    display: inline-block;
+}
+a.link1, a.link2{
+    text-decoration: none;
+    float: right;
+}
+.logo{
+    background: #f44336;
+}
+a.link1{
+    background: #1f4c70;
+}
+a.link2{
+    background: #2196f3;
+}
+main .wrapper{
+    background: #ccc;
+    padding: 20px;
+}
+.picture-label{
+    font-size: 40px ;
+    color:white;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    background: rgba(255, 34, 80, 0.69);
+    padding: 45px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+figure{
+    position: relative;
+    float: right;
+}

@@ -1,0 +1,52 @@
+I have created nev .css file, because we should make separated file for css code.
+
+Requirements fot html:
+1.you must use doctype.
+2.you must specify utf-8.
+3.you should specify language.
+4.you should specify meta-attribute content "edge", because "edge" is the latest version.
+5.you should ude double quotes "" instead of single '' and  necessarily to put the class name in  double quotes "".
+6.tag for closing </body> and </div> vas missed.
+7.you should use (only)one tab for tags inside other tags.
+8.</li> was missed and you should write <a>, which inside <li>, on the same one line for readable.
+9.class should be first at line.
+10.you should use </br> instead of <br>.
+11.was in code: span class="avatar". Should be: div class="avatar". Because <img> inside <span> in not correct.
+12.were renamed div class="footer"-> footer, some <div>s -> <section>  for semantic.
+
+Requirements fot css:
+1.you should make separated file for css code.
+2.media queries should be in the end.
+3.End all declarations should be with a semi-colon.
+4.When grouping selectors, keep individual selectors to a single line.
+5.keyframes is not used, so it is excess code (i have deleted it).
+6.Some changing for colors:#33333-> #333 and #COLOR->#color.
+7.you should use short entry for properties, for example:
+     padding:40px 20px ;
+instead of
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*padding-top: 40px;:;*/
+    /*padding-bottom: 40px;*/
+or
+    padding: 95px 0 70px 0;
+instead of
+    padding: 95px 0px 70px 0px;
+or
+    div.footer {
+        padding-top: 50px;
+    }
+instead of
+    div.footer {
+        padding: 50px 0px 0px 0px;
+    }
+8.Some classes like "top-nav", "gray" , "logo", "item-nav" are not declared in css styles.
+9.I join some classes with the same properties:
+  .skills .skill-list,
+  .third-block .award-list{
+        margin-left: 0;// was repeated
+   }
+
+
+
+
