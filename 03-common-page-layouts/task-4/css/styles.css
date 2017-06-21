@@ -1,0 +1,279 @@
+body,
+h2,
+p,
+img,
+div,
+article,
+li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    min-width: 480px;
+}
+
+.top-header {
+    text-align: center;
+    height: 888px;
+    background: url(../img/bg-head.png) no-repeat center bottom;
+    background-size: cover;
+}
+
+.logo {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.main-headline {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 48px;
+    color: #fff;
+}
+
+.main-subtitle {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-bottom: 40px;
+}
+
+.main-form {
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    background: #fff;
+    padding: 40px;
+}
+
+.main-form h2 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.main-form label {
+    font-size: 12px;
+    line-height: 24px;
+    color: #a7a8a8;
+}
+
+.main-form p {
+    text-align: left;
+}
+
+.main-form input {
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #9a9b9b;
+    margin-bottom: 24px;
+}
+
+.form-submit {
+    margin: 0 auto;
+    width: 213px;
+    height: 41px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #9c27b0;
+    border: none;
+}
+
+.benefits {
+    padding: 50px 20px;
+}
+
+.about-headline {
+    font-size: 30px;
+    line-height: 35px;
+    padding-bottom: 20px;
+}
+
+.article-benefit {
+    vertical-align: top;
+
+}
+
+.article-benefit p {
+    font-size: 12px;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.article-benefit img {
+    margin: 0 auto;
+    display: block;
+
+}
+
+.benefit-headline {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 300;
+    padding: 25px 0;
+}
+
+.features {
+    background: #fafafa;
+    padding: 63px 20px;
+}
+
+.features img {
+    width: 100%;
+}
+
+.features-headline {
+    text-align: center;
+}
+
+.features p {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.features-set {
+    margin: 23px 0;
+
+}
+
+ul.features-set li {
+    list-style-image: url(../img/icon-feature.png);
+}
+
+ul.features-set li h2 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ul.features-set li p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.gallery {
+    font-size: 0;
+}
+
+.gallery img {
+    width: 50%;
+    display: inline-block;
+}
+
+.questions {
+    padding: 67px 20px;
+    background: #fafafa;
+}
+
+.questions-headline {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.questions .wrapper > p {
+    text-align: center;
+}
+
+.questions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.questions-list li h2 {
+    padding: 30px 0;
+}
+
+.questions-list li p,
+.copyright {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .top-header {
+        padding: 20px 30px;
+    }
+
+    .article-benefit {
+        display: inline-block;
+        padding-left: 20px;
+    }
+
+    .part {
+        width: 25%;
+    }
+
+    .about {
+        width: 50%;
+        padding-right: 80px;
+    }
+
+    .benefits {
+        font-size: 0;
+    }
+
+    .article-benefit img {
+        width: 100%;
+    }
+
+    .features img,
+    .features-set {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .features-set {
+        margin: 0;
+    }
+
+    .questions-list li {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 20px;
+    }
+
+    .questions-list:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper {
+        margin: 0 auto;
+        padding: 0 109px;
+    }
+
+    .gallery img {
+        width: 25%;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .wrapper {
+        width: 1177px;
+    }
+
+}
