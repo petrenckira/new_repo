@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+body,
+header,
+section,
+footer
+ul,
+li,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+    background: #f7fdfe;
+}
+
+.wrapper {
+    padding: 20px 30px;
+}
+
+.header {
+    color: #fff;
+}
+
+.header-top {
+    padding: 15px;
+}
+
+.logo {
+    float: left;
+    width: 100px;
+    height: 50px;
+    background: url(../img/EPAM_logo.svg) no-repeat center;
+    background-size: contain;
+}
+
+.sing-in {
+    text-align: right;
+    margin: 10px;
+}
+
+.link {
+    font-weight: 600;
+    font-size: 0.875em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 10px;
+}
+
+.link:hover {
+    color: black;
+}
+
+.sing-in__link,
+.team__link {
+    color: #fff;
+    background: #0ebfdd;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.item {
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
+    border-top: 1px solid #b6bbc0;
+}
+
+.menu__link {
+    color: #82868f;
+}
+
+.header-container {
+    background: url(../img/bg-header.png) no-repeat center;
+}
+
+.headline {
+    font-size: 2.750em;
+    line-height: 1.25em;
+}
+
+.text {
+    padding: 20px 0;
+    font-size: 1.25em;
+    line-height: 28px;
+}
+
+.about,
+.team,
+.header-container,
+.newsletter {
+    text-align: center;
+}
+
+.about__headline,
+.newsletter__headline {
+    color: #0ebfdd;
+}
+
+.team {
+    background: #0ebfdd;
+    color: #fff;
+}
+
+.team__img {
+    border-radius: 50%;;
+}
+
+.team__headline-name {
+    padding: 10px;
+}
+
+.team__work-with-us {
+    padding: 20px;
+}
+
+.newsletter__input-container {
+    margin: 0 auto;
+    width: 219px;
+    position: relative;
+}
+
+.newsletter__input {
+    width: 219px;
+    font-size: 0.875px;
+    line-height: 25px;
+    color: #82868f;
+    border-radius: 10px;
+    border: 1px solid #82868f;
+}
+
+.newsletter__button {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    background: #fff;
+    border: none;
+    color: #0ebfdd;
+}
+
+.footer {
+    background: #45494d;
+    color: #fff;
+}
+
+.contact-us {
+    margin-bottom: 20px;
+}
+
+.contact-us__item {
+    margin: 0 auto;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.contact-us__link {
+    padding: 0;
+}
+
+.company-info {
+    padding-bottom: 20px;
+}
+
+.company-info-list__item {
+    color: #82868f;
+}
+
+.add-info-list__link,
+.contact-us__link {
+    color: #fff;
+    font-weight: 400;
+}
+
+.company-info {
+    font-size: 0.75em;
+    border-top: 1px solid #ffffff;
+}
+
+/*clearfix*/
+.header-top {
+    overflow: hidden;
+}
+
+.sing-in:after,
+.company-info:after,
+.company-info-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media screen and (min-width: 480px) {
+    .team__item {
+        width: 49%;
+        display: inline-block;
+    }
+
+    .contact-us__item {
+        display: inline-block;
+        width: 40px;
+        margin: 0 50px;
+
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .sing-in {
+        float: right;
+    }
+
+    .menu__item,
+    .add-info-list__item,
+    .add-info-list {
+        display: inline-block;
+        border: none;
+    }
+
+    .add-info-list {
+        margin-bottom: 20px;
+    }
+
+    .menu__list,
+    .contact-us__item,
+    .contact-us,
+    .company-info-list__item {
+        float: right;
+    }
+
+    .contact-us__item {
+        margin: 0 10px;
+    }
+
+    .company-info-list__item {
+        margin-top: 5px;
+        padding: 5px;
+        border-right: 1px solid #82868f;
+    }
+
+    .company-info {
+        position: relative;
+    }
+
+    .company-info-list {
+        position: absolute;
+        right: 0;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .team__item {
+        width: 32%;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 768px) and
+(-webkit-min-device-pixel-ratio: 1) {
+    .logo {
+        background: url(../img/EPAM_logo.svg) no-repeat center;
+        background-size: contain;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 768px) and
+(-webkit-min-device-pixel-ratio: 2) {
+    .logo {
+        background: url(../img/inst-logo.png) no-repeat center;
+        background-size: contain;
+    }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 768px) and
+(-webkit-min-device-pixel-ratio: 3) {
+    .logo {
+        background: url(../img/Instagram_icon-.png) no-repeat center;
+        background-size: contain;
+    }
+}
