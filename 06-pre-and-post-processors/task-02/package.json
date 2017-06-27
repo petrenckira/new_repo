@@ -1,0 +1,12 @@
+{
+  "name": "my-awesome-css",
+  "version": "0.0.1",
+  "scripts": {
+    "postcss": "postcss -c config.json"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "cssnano": "^3.10.0",
+    "postcss-cli": "^2.5.1"
+  }
+}

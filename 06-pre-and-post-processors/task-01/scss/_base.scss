@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-body;
+}
+
+.wrapper {
+  width: 1900px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.wrapper {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+.headline {
+  font: {
+    size: $h1-size;
+  }
+  padding: 110px 0;
+  text-transform: uppercase;
+}
+
+.container {
+  @include flex;
+  flex-direction: row;
+}
+
+.button-list {
+  @include flex;
+  flex-direction: column;
+  &__button-item {
+    list-style: none;
+    padding-bottom: 108px;
+  }
+}
+
+.button {
+  @each $status, $color in $button-colors {
+    &--#{$status} {
+      @include gradient(lighten($color, 10%), $color, darken($color, 10%));
+      @include box-shadow;
+    }
+    &--#{$status}:hover {
+      background: $color;
+      box-shadow: none;
+    }
+  }
+  font: {
+    size: $button-font-size;
+  }
+  color: $text-color-elements;
+  height: $button-height;
+  width: $button-width;
+  border-radius: 10px;
+}
+
+.check-box-list {
+  &__check-box-item {
+    @include vertical-align;
+    margin: 0 30px 10px 0;
+  }
+}
+
+.check-box {
+  :disabled + &__label {
+    opacity: 0.6;
+  }
+  display: none;
+  &__label {
+    &:before {
+      @include vertical-align;
+      @include label;
+      color: $background-elements;
+    }
+    @include vertical-align;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    background: $background-elements;
+    cursor: pointer;
+
+  }
+  &:checked + & {
+    &__label:before {
+      @include label;
+      color: $text-color-elements;
+    }
+  }
+  @each $status, $color in $button-colors {
+    &--#{$status}:checked + &__label--#{$status} {
+      background: $color;
+    }
+  }
+
+}
+
+.pagination-list {
+  margin-bottom: 100px;
+  @include vertical-align;
+  width: 24%;
+  &__pagination-item {
+    @include vertical-align;
+
+  }
+}
+
+.link-arrow {
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 0 20px 40px 0;
+  background: $background-elements;
+
+}
+
+.link {
+  font {
+    size: 20px;
+  }
+  color: $text-color-elements-dark;
+  text-decoration: none;
+  text-align: center;
+  @each $status, $color in $button-colors {
+    &--#{$status} {
+      @extend .link-arrow;
+    }
+    &--#{$status}:hover {
+      background: $color;
+      color: $text-color-elements;
+    }
+  }
+}
+
+.tabs-first-list {
+  @include vertical-align;
+  font-size: 0;
+  width: 40%;
+  margin-bottom: 100px;
+  &__item {
+    @include vertical-align;
+    font: {
+      size: 30px;
+      weight: 500;
+    }
+    line-height: 30px;
+    list-style: none;
+  }
+}
+
+.link-first {
+  @each $status, $color in $button-colors {
+    &--#{$status} {
+      @include border-bottom(2px, $background-elements);
+      color: #bdc3c7;
+      padding: 10px;
+    }
+    &--#{$status}:hover {
+      @include border-bottom(2px, $color);
+      color: $text-color-elements-dark;
+    }
+  }
+}
+
+.tabs-second-list {
+  :nth-child(1)>a{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  :nth-last-child(1)>a{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  @extend .tabs-first-list;
+  &__item {
+    @extend .tabs-first-list__item;
+  }
+
+}
+
+.link-second {
+  @each $status, $color in $button-colors {
+    &--#{$status} {
+      color: $text-color-elements-dark;
+      padding: 10px;
+      background: $text-color-elements;
+      border: 1px solid #bdc3c7;
+    }
+    &--#{$status}:hover {
+      color: $text-color-elements;
+      background: $color;
+    }
+  }
+}
