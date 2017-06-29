@@ -1,0 +1,26 @@
+1.	'' + 1 + 0 result: '10' . because first variable in concatenation  is a string, so result will be string type.
+2.	'' - 1 + 0 result: -1  . because talking about subtraction operation, symbol '-' convert expression to number type.
+3.	true + false result: 1 .symbol '+' in this this case make converting like: true=1, false=0, so we have 1+0=1.
+4.	6 / '3' result: 2 . because interpreter tries to convert character after '/' in number, so we have 6/2=3. in another situation, we would have Nan
+5.	'2' * '3' result: 2 . The same case with '/'.
+6.	4 + 5 + 'px' result: 9px. 4 and 5 is numnbers, so we have 5. and adding string at the end makes all expression like a string.
+7.	'$' + 4 + 5 result: '$45'. because first type in concatenation is string.
+8.	'4' - 2 result: 2; the same that in 2-cond case.
+9.	'4px' - 2 result: Nan . interpreter can't calculate, because is can't transform string to number.
+10.	7 / 0 result:infinity. like a result in algebra)
+11.	parseInt('09') result:9 . interpreter reads while it can.So we have 09, but interpreter separate excess. and result is 9.
+12.	'  -9\n' + 5 result: string '  -9\n + 5'. like in 1-st case.
+13.	'  -9\n' - 5 result: -14 . like in 2-cond case.
+14.	5 && 2 result: 2; && works like 5=>true and 2=>true, so we have last result 2.
+15.	2 && 5  result: 5; && works like 5=>true and 2=>true, so we have last result 5. in case 2 && 5 && 7 result will be 7.
+16.	5 || 0 result: 5 . because 5 => true .
+17.	0 || 5  result: 5 . because 5 => true .
+18.	null + 1 result: 1. 0+1=1
+19.	undefined + 1 result: nan because nan+1=nan
+20.	(1,5 - 1) * 2 result: (5-1)*2, so we have 8.
+21.	+ '' result: + transform '' in false, then in 0.
+22.	+[] result: 0 .
+23.	[] + []  in this case every array will be transform to the empty string. so we have "". because interpreter use toString.
+24.	[7] + [8] result:"78". Explanation at 23-th.
+25.	+[8] result: + "8"=> + 8 => 8
+26.	+[7,8] result: + "7, 8"=> not a  number.
