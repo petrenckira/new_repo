@@ -1,4 +1,3 @@
-// alert("JS file for task result linked successfully");
 window.onload=function () {
         let form=document.querySelector(".config-group");
         let table=document.querySelector(".table.table-bordered");
@@ -49,17 +48,26 @@ window.onload=function () {
         function hoverStyle(event) {
                 let elem=event.target;
                 if(elem.tagName=="TD"){
-                        highlighting(elem);
                         let parentRow=elem.parentNode.firstChild;
-                        highlighting(parentRow);
                         let index=elem.cellIndex;
                         let parentCell=elem.closest("table").firstChild.firstChild.childNodes[index];
-                        highlighting(parentCell);
+                        if(event.type=="mouseover"){
+                                highlightingAdd(elem);
+                                highlightingAdd(parentRow);
+                                highlightingAdd(parentCell);
+                        }
+                        else {
+                                highlightingRemove(elem);
+                                highlightingRemove(parentRow);
+                                highlightingRemove(parentCell);
+                        }
                 }
-
         }
-        function highlighting(elem) {
-                elem.classList.toggle("highlighting");
+        function highlightingAdd(elem) {
+                elem.className="highlighting";
+        }
+        function highlightingRemove(elem) {
+                elem.className="";
         }
         function replacing (event) {
                 let elem=event.target;
