@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 768px;
+  background: @background-body;
+  color: @color-h1;
+  font: @font-caption-desktop;
+}
+
+.wrapper {
+  width: 1182px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 40px;
+  z-index: 200;
+  &--fixed {
+    background: @background-body;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 5px 8px 2px rgba(34, 56, 73, 0.3);
+  }
+  &__logo {
+    background: url(../../images/Logo.svg);
+    height: 70px;
+    width: 230px;
+    background-size: contain;
+    margin-bottom: 20px;
+  }
+}
+
+.headline {
+  text-align: center;
+  &-button {
+    font: @font-h3-desktop;
+    padding: 5px;
+  }
+}
+
+.menu {
+  .clearfix;
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  background: none;
+  color: @color-link-default;
+  cursor: pointer;
+  &:hover {
+    color: @color-link-pressed;
+  }
+  &:active {
+    color: @color-link-selected;
+  }
+  &-bottom {
+    margin: 0 10px;
+    .button-color(blue, @color-button-blue, @color-button-blue-active);
+    .button-color(green, @color-button-green, @color-button-green-active);
+    .button-color(red, @color-button-red, @color-button-red-active);
+    &-set {
+      text-align: center;
+      margin: 100px auto 100px;
+    }
+  }
+}
+
+.item {
+  .vertical-align;
+}
+
+.link {
+  background: none;
+  text-decoration: none;
+  color: @color-link-default;
+  cursor: pointer;
+  &:hover {
+    color: @color-link-pressed;
+  }
+  &:active {
+    color: @color-link-selected;
+  }
+}
+
+.menu-list {
+  float: right;
+  &__item {
+    position: relative;
+    padding-left: 45px;
+  }
+  &__link {
+    font: @font-h1-desktop;
+  }
+}
+
+.status-list {
+  .mix-list;
+}
+
+.task {
+  .flex-display();
+  width: 100%;
+  background: @color-h1;
+  margin: 5px 0;
+  box-shadow: 0 5px 8px 2px rgba(34, 56, 73, 0.3);
+  &--done {
+    opacity: 0.7;
+  }
+  .border-left(work, @color-work);
+  .border-left(hobby, @color-hobby);
+  .border-left(sport, @color-sport);
+  .border-left(education, @color-education);
+  .border-left(other, @color-other);
+  &__trash {
+    width: 100px;
+    font: @font-tomato-icon;
+    text-align: center;
+    padding: 15px;
+    &:hover > span:before {
+      content: '\E906';
+    }
+    .trash(hobby, @color-hobby, @color-hobby-active);
+    .trash(work, @color-work, @color-work-active);
+    .trash(education, @color-education, @color-education-active);
+    .trash(sport, @color-sport, @color-sport-active);
+    .trash(other, @color-other, @color-other-active);
+  }
+  &__time {
+    color: @color-task-time;
+    padding: 40px 24px;
+    text-transform: uppercase;
+  }
+  &__date {
+    font: @font-h1-desktop;
+  }
+  &__description {
+    padding: 20px 10px;
+  }
+  &__headline {
+    font: @font-h3-desktop;
+    line-height: 40px;
+    .mix-category-headline(urgent, @color-urgent);
+    .mix-category-headline(middle, @color-middle);
+    .mix-category-headline(high, @color-high);
+    .mix-category-headline(low, @color-low);
+    &--done {
+      text-decoration: line-through;
+    }
+
+  }
+  &__text {
+    color: @color-task-text;
+    font: @font-paragraph-desktop;
+
+  }
+  &__buttons {
+    .flex-display;
+    .flex-direction(@direction: column);
+    .justify-content(@justify: space-around);
+    padding: 0 30px;
+    margin-left: auto;
+    &--done {
+      visibility: hidden;
+    }
+  }
+  &__button-edit {
+    margin-left: auto;
+    font: 20px robotobold;
+  }
+  &__button-arr-up {
+    font: 20px robotobold;
+  }
+  &__priority {
+    position: relative;
+    width: 87px;
+    padding: 20px 0;
+    text-align: center;
+    &:hover span:nth-child(1):before {
+      content: '\E90e';
+    }
+    &:hover span:nth-child(2) {
+      opacity: 0;
+      cursor: pointer;
+    }
+    .notification(urgent, @color-urgent);
+    .notification(middle, @color-middle);
+    .notification(high, @color-high);
+    .notification(low, @color-low);
+  }
+  &__icon-tomato {
+    .position-center;
+    font: @font-tomato-icon;
+  }
+  &__tomato-value {
+    .position-center;
+    padding: 10px;
+    font: @font-tomato-icon-value;
+  }
+}
+
+.global-list {
+  font: @font-h3-desktop;
+  padding: 40px 0;
+  &__link > * {
+    padding: 5px;
+    font: @font-caption-desktop;
+  }
+}
+
+.categories {
+  width: 100%;
+  &-list {
+    .mix-list;
+  }
+}
+
+.category {
+  width: 100%;
+  margin-top: 40px;
+  .clearfix;
+  .mix-category( @category:work, @color: @color-work);
+  .mix-category( @category:hobby, @color: @color-hobby);
+  .mix-category( @category:sport, @color: @color-sport);
+  .mix-category( @category:education, @color: @color-education);
+  .mix-category( @category:other, @color: @color-other);
+  &-headline {
+    padding: 0 0 20px 30px;
+    text-transform: uppercase;
+    .mix-category-headline(@category:work, @color: @color-work);
+    .mix-category-headline(@category:hobby, @color: @color-hobby);
+    .mix-category-headline(@category:education, @color: @color-education);
+    .mix-category-headline(@category:other, @color: @color-other);
+  }
+}
+
+.adding-info {
+  max-width: 498px;
+  width: 100%;
+  margin: 0 auto;
+  &__headline {
+    font: @font-h1-desktop;
+  }
+}
+
+.control-list {
+  .flex-display();
+  .justify-content(flex-end);
+  padding: 11px 0;
+  &__item {
+    padding-right: 15px;
+  }
+  &__link {
+    font: @font-h3-desktop;
+  }
+}
+
+.block-info {
+  margin-bottom: 32px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid @color-link-default;
+  &__headline {
+    text-transform: uppercase;
+    padding: 10px 0;
+    font: @font-caption-desktop;
+  }
+  &__input {
+    width: 480px;
+    padding: 5px 0;
+    font: @font-paragraph-desktop;
+  }
+  &__radio {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    .mix-radio-checked(work, @color-work);
+    .mix-radio-checked(hobby, @color-hobby);
+    .mix-radio-checked(sport, @color-sport);
+    .mix-radio-checked(education, @color-education);
+    .mix-radio-checked(other, @color-other);
+    .mix-radio-checked(urgent, @color-urgent);
+    //.mix-radio-checked(high, @color-high;//i don't know why it's doesn't work.
+    //.mix-radio-checked(middle, @color-middle);
+    //.mix-radio-checked(low, @color-low);
+    .mix-radio-checked-tomato(tomato);
+
+  }
+  &__label {
+    .mix-radio(work, @color-work);
+    .mix-radio(hobby, @color-hobby);
+    .mix-radio(sport, @color-sport);
+    .mix-radio(education, @color-education);
+    .mix-radio(other, @color-other);
+    .mix-radio(urgent, @color-urgent);
+    .mix-radio(high, @color-high);
+    .mix-radio(middle, @color-middle);
+    .mix-radio(low, @color-low);
+    .mix-radio-tomato(tomato);
+    color: @color-link-default;
+    font: @font-paragraph-desktop;
+  }
+}
+
+.input {
+  border: none;
+  background: none;
+  color: @color-link-default;
+  cursor: pointer;
+  //.placeholder;//is not working. whyyyyyy!!
+}
+
+.tool {
+  font: @font-h3-desktop;
+  float: left;
+  padding: 11px 0;
+}
+
+.pomodoro-settings-bloks {
+  .flex-display();
+  .flex-wrap(wrap);
+  .justify-content(center);
+  .align-items(flex-start);
+  .align-content(flex-start);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pomodoro-settings-block {
+  .flex-display();
+  .flex-wrap(wrap);
+  .mix-settings-category(work, @color-work);
+  .mix-settings-category(hobby, @color-hobby);
+  .mix-settings-category(sport, @color-sport);
+  .mix-settings-category(education, @color-education);
+  .mix-settings-category(other, @color-other);
+  padding: 20px 0px 40px 30px;
+  width: 45%;
+  &__headline {
+    padding-top: 15px;
+    font: @font-caption-desktop;
+    text-transform: uppercase;
+  }
+  &__controls {
+    padding: 10px 0;
+    margin-left: 40px;
+    border-bottom: 1px solid @color-link-default;
+  }
+  &__plus,
+  &__minus,
+  &__value {
+    font: @font-paragraph-desktop;
+    color: @color-link-default;
+    padding: 0 5px;
+  }
+  &__value {
+    padding: 0 15px;
+  }
+  &__caption {
+    font: @font-caption-desktop;
+    color: @color-link-default;
+    padding: 10px 0;
+  }
+  &__word {
+    color: @color-h1;
+  }
+
+}
+
+.pomodoro-settings {
+  &__headline {
+    font: @font-h3-laptop;
+    color: @color-link-default;
+  }
+  &__caption {
+    text-align: center;
+    padding: 10px;
+  }
+
+}
+
+.category-settings {
+  width: 30%;
+  margin: 0 auto;
+
+}
+
+.category-settings-list {
+  &__item {
+    color: @color-link-default;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid @color-link-default;
+    .mix-settings-category(work, @color-work);
+    .mix-settings-category(hobby, @color-hobby);
+    .mix-settings-category(sport, @color-sport);
+    .mix-settings-category(education, @color-education);
+    .mix-settings-category(other, @color-other);
+  }
+}
+
+.block-info-list {
+  &__item {
+    position: relative;
+  }
+}
+
+.notification-message {
+  .flex-display();
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font: @font-h3-desktop;
+  color: @color-h1;
+  width: 450px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  .notification(success, @color-success);
+  .notification(warning, @color-warning);
+  .notification(info, @color-info);
+  .notification(error, @color-error);
+  &__text {
+    padding: 12px;
+    margin-right: auto;
+  }
+  &__button {
+    color: @color-h1;
+  }
+  &__icon {
+    font: @font-h1-desktop;
+    padding: 10px 20px;
+    .notification(success, @color-success-icon);
+    .notification(warning, @color-warning-icon);
+    .notification(info, @color-info-icon);
+    .notification(error, @color-error-icon);
+  }
+}
+
+.message {
+  font: @font-message-desktop;
+  color: @color-link-default;
+  text-align: center;
+  width: 76%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.tomato-add {
+  background: url(../../images/tomato-add.svg) no-repeat;
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 50px;
+}
+
+.tomato-add-new {
+  background: url(../../images/tomato-addv02.svg) no-repeat;
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 50px;
+}
+
+.tomato-add-settings {
+  background: url(../../images/tomato_settings.svg) no-repeat;
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 50px;
+}
+
+.arrow-button {
+  font-size: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.removed {
+  display: none;
+}
+
+.counter-trash {
+  position: absolute;
+  text-align: center;
+  padding: 2px 0;
+  display: block;
+  background: #ff0000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: @color-h1;
+  right: -5px;
+  bottom: -5px;
+}
+
+//tooltips
+.tooltip {
+  .vertical-align;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  padding: 10px 15px;
+  background-color: rgba(219, 234, 245, 0.9);
+  color: rgb(60, 81, 98);
+  font-weight: 700;
+  white-space: nowrap;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  border-radius: 4px;
+  border: 1px solid #546c7e;
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 9%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  &:before {
+    bottom: 100%;
+    border-color: transparent transparent #546c7e transparent;
+    border-width: 11px;
+  }
+  &:after {
+    bottom: 96%;
+    border-color: transparent transparent rgba(219, 234, 245, 0.9) transparent;
+    border-width: 11px;
+  }
+}
+
+//end tooltips
+
+.menu-list__item,
+.global-list,
+.task__button-arr-up {
+  position: relative;
+}
+
+.menu-list__item,
+.global-list,
+.task__button-arr-up {
+  &:hover > .tooltip {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.list-container {
+  .flex-display();
+  .justify-content(space-between);
+}
+.day-report{
+  background: url(../../images/01-Day-Report-Tasks_03.png) no-repeat;
+  width: 600px;
+  height: 600px;
+  margin: 100px auto 50px;
+}
+
+

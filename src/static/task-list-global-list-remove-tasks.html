@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Task List Global List remove task</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <nav class="menu">
+      <ul class="list menu-list">
+        <li class="item menu-list__item"><a class="link menu-list__link" href="#" title="delete"><span
+          class="icon-trash"></span></a></li>
+        <li class="item menu-list__item"><a class="link menu-list__link" href="#" title="delete"><span
+          class="icon-list"></span></a></li>
+        <li class="item menu-list__item"><a class="link menu-list__link" href="#" title="delete"><span
+          class="icon-statistics"></span></a></li>
+        <li class="item menu-list__item"><a class="link menu-list__link" href="#" title="delete"><span
+          class="icon-settings"></span></a></li>
+      </ul>
+    </nav>
+    <h1 class="headline">Daily Task List
+      <button class="button headline-button" type="button"><span class="icon-add"></span></button>
+    </h1>
+  </header>
+  <main class="tasks">
+    <div class="list-container">
+      <ul class="list status-list">
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Select All</a></li>
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Deselect All</a></li>
+      </ul>
+      <ul class="list status-list">
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">To Do</a></li>
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Done</a></li>
+      </ul>
+    </div>
+    <div class="task task--hobby">
+      <div class="task__trash task__trash--hobby"><span class="icon-trash"></span></div>
+      <div class="task__time removed">today</div>
+      <div class="task__description">
+        <h2 class="task__headline task__headline--urgent">Lorem ipsum sit amet</h2>
+        <p class="task__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+      <div class="task__buttons">
+        <button class="button task__button-edit"><span class="icon-edit"></span></button>
+      </div>
+      <div class="task__priority task__priority--urgent">
+        <span class="task__icon-tomato icon-tomato"></span>
+        <span class="task__tomato-value">3</span>
+      </div>
+    </div>
+    <p class="global-list">
+      <a href="" class="link global-list__link" title="">Global List<span
+        class="icon-global-list-arrow-right"></span></a>
+    </p>
+  </main>
+  <section class="categories">
+    <div class="list-container">
+      <ul class="list status-list">
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Select All</a></li>
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Deselect All</a></li>
+      </ul>
+      <ul class="list categories-list">
+        <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">All</a></li>
+        <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">Urgent</a></li>
+        <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">High</a></li>
+        <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">Middle</a></li>
+        <li class="item categories-list__item"><a href="" title="" class="link categories__link">Low</a></li>
+      </ul>
+    </div>
+
+    <div class="category category--work">
+      <h2 class="category-headline category-headline--work">work</h2>
+      <div class="task task--work">
+        <div class="task__trash task__trash--work"><span class="icon-trash"></span></div>
+        <div class="task__time removed">today</div>
+        <div class="task__description">
+          <h2 class="task__headline task__headline--high">Lorem ipsum sit amet</h2>
+          <p class="task__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </div>
+        <div class="task__buttons">
+          <button class="button task__button-arr-up"><span class="icon-arrows-up"></span></button>
+          <button class="button task__button-edit"><span class="icon-edit"></span></button>
+        </div>
+        <div class="task__priority task__priority--high">
+          <span class="task__icon-tomato icon-tomato"></span>
+          <span class="task__tomato-value">3</span>
+        </div>
+      </div>
+
+      <div class="task task--work">
+        <div class="task__trash task__trash--work"><span class="icon-trash"></span></div>
+        <div class="task__time removed">today</div>
+        <div class="task__description">
+          <h2 class="task__headline task__headline--middle">Lorem ipsum sit amet</h2>
+          <p class="task__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </div>
+        <div class="task__buttons">
+          <button class="button task__button-arr-up"><span class="icon-arrows-up"></span></button>
+          <button class="button task__button-edit"><span class="icon-edit"></span></button>
+        </div>
+        <div class="task__priority task__priority--middle">
+          <span class="task__icon-tomato icon-tomato"></span>
+          <span class="task__tomato-value">3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="category category--education">
+      <h2 class="category-headline category-headline--education">education</h2>
+      <div class="task task--education">
+        <div class="task__trash task__trash--education"><span class="icon-trash"></span></div>
+        <div class="task__time removed">today</div>
+        <div class="task__description">
+          <h2 class="task__headline task__headline--low">Lorem ipsum sit amet</h2>
+          <p class="task__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </div>
+        <div class="task__buttons">
+          <button class="button task__button-arr-up"><span class="icon-arrows-up"></span></button>
+          <button class="button task__button-edit"><span class="icon-edit"></span></button>
+        </div>
+        <div class="task__priority task__priority--low">
+          <span class="task__icon-tomato icon-tomato"></span>
+          <span class="task__tomato-value">3</span>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+</div>
+<script type="text/javascript" src="../bundle.js" charset="utf-8"></script>
+</body>
+</html>
