@@ -20,23 +20,53 @@ body {
 .header {
   padding-top: 40px;
   z-index: 200;
-  &--fixed {
+  //&--fixed {
+  //  background: @background-body;
+  //  position: fixed;
+  //  top: 0;
+  //  right: 0;
+  //  width: 100%;
+  //  box-shadow: 0 5px 8px 2px rgba(34, 56, 73, 0.3);
+  //}
+
+}
+.logo {
+visibility: hidden;
+}
+.body-fixed{
+  .header{
+    padding-top: 0;
     background: @background-body;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
+    height: 136px;
+    line-height: 136px;
     box-shadow: 0 5px 8px 2px rgba(34, 56, 73, 0.3);
+    animation: transform-header 0.5s;
   }
-  &__logo {
+  .logo{
     background: url(../../images/Logo.svg);
     height: 70px;
     width: 230px;
     background-size: contain;
     margin-bottom: 20px;
+    visibility: visible;
+  }
+  .headline{
+    display: none;
   }
 }
+@keyframes transform-header {
+  0% {
+    transform: translateY(-100px);
+  }
 
+  100% {
+    transform: translateY(0);
+  }
+}
 .headline {
   text-align: center;
   &-button {
@@ -557,11 +587,72 @@ body {
   .flex-display();
   .justify-content(space-between);
 }
-.day-report{
+
+.day-report {
   background: url(../../images/01-Day-Report-Tasks_03.png) no-repeat;
   width: 600px;
   height: 600px;
   margin: 100px auto 50px;
+}
+
+#cycle {
+  height: 10px;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+}
+
+#time-line {
+  position: relative;
+  p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: @color-link-default;
+    font-size: 11px;
+    .vertical-align;
+    padding: 20px 0;
+    text-align: right;
+    &:before {
+      position: absolute;
+      content: '\00B7';
+      left: 50%;
+      transform: translateX(-50%);
+      top: -5%;
+      right: 2%;
+      color: @color-link-pressed;
+      font-size: 20px;
+    }
+  }
+}
+
+#phase-time {
+  height: 50px;
+  position: relative;
+  p {
+    //width: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: @color-link-default;
+    font-size: 11px;
+    .vertical-align;
+    padding: 20px 0;
+    text-align: right;
+    &:before {
+      position: absolute;
+      content: '\00B7';
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      right: 2%;
+      color: @color-link-pressed;
+      font-size: 20px;
+    }
+  }
+  p:nth-child(3){
+    width: 38px;
+  }
+
 }
 
 
