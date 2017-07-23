@@ -3,6 +3,8 @@
 Good webpack.config.
 You renamed amazingArray predicted its renaming where it was imported.
 1. It works but it's not readable: 
+
+
 ```js
 export {makeStringAmazing as anotherNameOfMakeStringAmazing , amazingString,amazingObject, amazingArray as greatArray, amazingBoolean, amazingNumber};
 ```
@@ -26,6 +28,8 @@ import { amazingString, amazingNumber, greatArray, anotherNameOfMakeStringAmazin
 ---
 1. Unsed *webpackUglifyJsPlugin*
 2. Dead code.
+
+
 ```js
 // new webpack.optimize.CommonsChunkPlugin('vendor', 'vendors.bundle.js')
 ```
