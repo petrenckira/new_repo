@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="quora" unicode="&#xf2c4;" d="M700 411q0 177-58 265t-184 87q-124 0-182-88t-58-264q0-176 58-263t182-87q41 0 73 9-13 24-22 41t-25 36-29 32-36 20-43 8q-26 0-44-9l-27 54q58 51 154 51 73 0 120-30t84-86q37 83 37 224z m218-353h65q2-15-1-37t-15-53-32-56-60-44-90-18q-40 0-73 11t-59 31-44 43-37 54q-54-15-114-15-84 0-164 32t-141 89-99 139-38 177q0 95 38 178t100 140 141 89 163 32q67 0 133-20t121-59 98-92 67-122 24-146q0-106-45-194t-122-148q26-39 52-59t58-21q34 0 53 21t21 48z" horiz-adv-x="1000" />
+
+<glyph glyph-name="telegram" unicode="&#xf2c6;" d="M664 121l82 386q5 25-6 36t-29 3l-482-185q-16-6-22-14t-2-15 18-11l124-38 286 180q12 8 18 3 4-3-3-8l-231-210-9-127q13 0 25 13l60 58 125-93q36-20 46 22z m336 229q0-102-40-194t-106-160-160-106-194-40-194 40-160 106-106 160-40 194 40 194 106 160 160 106 194 40 194-40 160-106 106-160 40-194z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

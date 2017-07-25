@@ -1,0 +1,10 @@
+1.scripts to bottom->scripts will be carried out after downloading DOM
+2.links to top-> style will be first
+3.rewrite inline styles to the main.css-> code optimization with respect to the standard
+4.delete comments-> size optimization
+5.add semantic tags: header, footer, section-> code optimization with respect to the standard of semantic code
+6.in css file delete all unusable css rules-> optimization css file size
+7.adding doctype->code optimization with respect to the standard
+8.adding title to <a> ->code optimization with respect to the standard of semantic code
+9.minimize css ->optimization size of css file
+10.delete classes in css file, which is not using-> optimization size of css file
