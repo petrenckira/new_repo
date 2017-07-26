@@ -1,0 +1,18 @@
+.animation-list li{
+  position: relative;
+  display: inline-block;
+  margin:0;
+}
+.animation-list li img {
+  position: relative;
+  display: block;
+  opacity:0.7;
+  transition: transform 0.5s, width 0.5s, height 0.5s;
+}
+
+.animation-list li img:hover {
+  opacity: 1;
+  transform: rotate(45deg) translateY(-10px);
+  width: 250px;
+  height:250px;
+}

@@ -1,0 +1,19 @@
+.ease{
+    transition: width 2s ease, background-color 2s ease;
+}
+.linear{
+    transition: width 2s linear, background-color 2s linear;
+}
+.easein{
+    transition: width 2s ease-in, background-color 2s ease-in;
+}
+.easeout{
+    transition: width 2s ease-out, background-color 2s ease-out;
+}
+.easeinout{
+    transition: width 2s ease-in-out, background-color 2s ease-in-out;
+}
+.example-transition:hover .progress-bar{
+    width: 100%;
+    background: #ff0000;
+}

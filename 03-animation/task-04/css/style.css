@@ -1,0 +1,129 @@
+.move-boat:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: url('../images/steam.png') no-repeat;
+    background-size: 120px;
+    position: absolute;
+    top: -50%;
+    left: -5%;
+    opacity: 0;
+   
+}
+
+.move-boat {
+    position: absolute;
+    bottom: 10px;
+    -webkit-transition: left 2s linear;
+    transition: left 2s ease-in;
+    left: 0;
+    
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 1600px;
+    height: 150px;
+    left: -50%;
+   
+}
+
+.sun {
+    position: absolute;
+    right: 0;
+    
+}
+
+.cloud {
+    position: absolute;
+    right: -150px;
+    z-index: 1;
+    
+}
+
+.panel-primary:hover .sun {
+    animation: Sun forwards linear 3s infinite;
+}
+
+.panel-primary:hover .cloud {
+    animation: Clouds 1s infinite alternate backwards;
+}
+
+.panel-primary:hover .animation-box {
+    animation: Background 1s infinite alternate backwards;
+    animation-delay: 1.3s;
+}
+
+
+.panel-primary:hover .wave {
+    animation: Waves forwards linear 3s infinite;
+}
+
+.panel-primary:hover .move-boat {
+    animation: Ship 3s ease-in infinite;
+}
+
+.panel-primary:hover .move-boat:after {
+    animation: ShipCloud linear 3s infinite alternate backwards;
+}
+
+@keyframes Sun {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes Clouds {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes Background {
+    to {
+        background-color: #262F37;
+    }
+}
+
+
+@keyframes Waves {
+    0% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+
+@keyframes Ship {
+    0% {
+        transform: translate(0, 5px) rotate(-8deg) translateX(0);
+    }
+    50% {
+        transform: translate(100px, -10px) rotate(8deg) translateX(100px);
+    }
+    75% {
+        transform: translate(100px, 5px) rotate(-8deg) translateX(200px);
+    }
+    100% {
+        transform: translate(100px, -5px) rotate(8deg) translateX(300px);
+    }
+}
+
+@keyframes ShipCloud {
+    0% {
+        opacity: .1;
+        transform: translate(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+}
+
