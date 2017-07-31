@@ -1,0 +1,22 @@
+.hg__header { grid-area: header;
+    background-color: #ff0000;}
+.hg__footer { grid-area: footer;
+    background-color: #16a085;}
+.hg__main { grid-area: main;
+    background-color: #53d1ff;}
+.hg__left { grid-area: navigation;
+    background-color: #fddc43;}
+.hg__right { grid-area: ads;
+    background-color: #fddc43;}
+
+.hg {
+    display: grid;
+    grid-template-areas: "header header header"
+    "navigation main ads"
+    "footer footer footer";
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 100px
+    1fr
+    30px;
+    min-height: 100vh;
+}

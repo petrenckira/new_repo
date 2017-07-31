@@ -1,0 +1,34 @@
+.flexbox,
+.flexbox-item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header,
+.footer {
+    height: 60px;
+    color: #fff;
+    background-color: #666;
+}
+
+.main {
+    height: 800px;
+    align-items: stretch;
+}
+
+.aside {
+    flex: none;
+    width: 180px;
+}
+
+.aside {
+    background-color: #FF6633;
+}
+
+.section {
+    flex: auto;
+    width: auto;
+    background-color: #D6D6D6;
+}
