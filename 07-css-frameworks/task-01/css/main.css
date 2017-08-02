@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+ul {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+body {
+  color: #506a85; }
+
+.header-top {
+  padding: 38px 0;
+  border-bottom: 2px solid #f2f5f7; }
+
+.header-bottom {
+  text-align: center;
+  padding: 67px 0; }
+  .header-bottom__headline {
+    font: 44px/54px "Source Sans Pro", sans-serif; }
+  .header-bottom__text {
+    font: 22px/34px "Source Sans Pro", sans-serif;
+    padding-top: 42px; }
+
+.nav {
+  background: #fff;
+  padding: 5px 91px; }
+
+.nav-list {
+  list-style: none; }
+  .nav-list__item {
+    text-align: center; }
+  .nav-list__link {
+    color: #506a85;
+    font: bold 15px "Source Sans Pro", sans-serif;
+    text-transform: uppercase; }
+    .nav-list__link:hover {
+      border-bottom: 1px solid #506a85; }
+
+.logo {
+  background: #fff;
+  text-align: center; }
+
+.qualities {
+  padding-bottom: 50px; }
+
+.quality {
+  padding: 0 10px; }
+  .quality__img-container {
+    text-align: center; }
+  .quality__headline {
+    font: 26px/34px "Source Sans Pro", sans-serif; }
+  .quality__text {
+    font: 16px/25px "Source Sans Pro", sans-serif; }
+  .quality__img {
+    color: #00bc9c;
+    font-size: 60px; }
+
+.gallery {
+  background: #f2f5f7;
+  padding-top: 129px;
+  text-align: center; }
+  .gallery__headline {
+    font: 44px/54px "Source Sans Pro", sans-serif; }
+  .gallery__subtitle {
+    font: 22px/34px "Source Sans Pro", sans-serif; }
+
+.picture {
+  background: #fff;
+  padding-bottom: 34px; }
+  .picture__img {
+    width: 100%; }
+  .picture__headline {
+    font: bold 20px/26px "Source Sans Pro", sans-serif;
+    padding-top: 34px; }
+  .picture__tetx {
+    font: 14px/22px "Source Sans Pro", sans-serif; }
+
+.picture-container {
+  padding: 70px 0; }
+
+.switcher {
+  background: #f2f5f7;
+  padding-bottom: 129px; }
+  .switcher__img {
+    height: auto; }
+
+.orbit button.is-active {
+  background: #00bc9c; }
+
+.orbit-previous, .orbit-next {
+  background: #c9d2da; }
+
+.button-green {
+  background: #00bc9c;
+  padding: 15px 37px;
+  color: #fff;
+  text-transform: uppercase;
+  font: bold 14px/22px "Source Sans Pro", sans-serif;
+  border-radius: 10px; }
+  .button-green:hover {
+    background: #f2f5f7;
+    color: #506a85; }

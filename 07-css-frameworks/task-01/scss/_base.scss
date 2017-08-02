@@ -1,0 +1,142 @@
+ul {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  color: $font-color;
+}
+
+.header {
+
+  &-top {
+    padding: 38px 0;
+    border-bottom: 2px solid $background-color-2;
+  }
+  &-bottom {
+    text-align: center;
+    padding: 67px 0;
+    &__headline {
+      font: $font-header-top-h1;
+    }
+    &__text {
+      font: $font-header-top-p;
+      padding-top: 42px;
+    }
+  }
+}
+
+.nav {
+  background: $background-color-1;
+  padding: 5px 91px;
+}
+
+.nav-list {
+  list-style: none;
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    //padding-right: 45px;
+    color: $font-color;
+    font: $font-nav;
+    text-transform: uppercase;
+    &:hover {
+      border-bottom: 1px solid $font-color;
+    }
+  }
+}
+
+.logo {
+  background: $background-color-1;
+  text-align: center;
+}
+
+.qualities {
+  padding-bottom: 50px;
+}
+
+.quality {
+  padding: 0 10px;
+  &__img-container {
+    text-align: center;
+  }
+  &__headline {
+    font: $font-quality-h1;
+  }
+  &__text {
+    font: $font-quality-p
+  }
+  &__img {
+    color: $icon-color;
+    font-size: 60px;
+  }
+}
+
+.gallery {
+  background: $background-color-2;
+  padding-top: 129px;
+  text-align: center;
+  &__headline {
+    font: $font-header-top-h1;
+
+  }
+  &__subtitle {
+    font: $font-header-top-p;
+
+  }
+}
+
+.picture {
+  background: $background-color-1;
+  padding-bottom: 34px;
+  &__img {
+    width: 100%;
+  }
+  &__headline {
+    font: $font-gallery-h;
+
+    padding-top: 34px;
+  }
+  &__tetx {
+    font: $font-gallery-p;
+  }
+}
+
+.picture-container {
+  padding: 70px 0;
+}
+
+.switcher {
+  background: $background-color-2;
+  padding-bottom: 129px;
+  &__img {
+    height: auto;
+  }
+}
+
+.orbit button.is-active {
+  background: $button-color;
+}
+
+.orbit-previous, .orbit-next {
+  background: #c9d2da;
+
+}
+
+.button-green {
+  background: $button-color;
+  padding: 15px 37px;
+  color: $background-color-1;
+  text-transform: uppercase;
+  font:bold $font-gallery-p;
+  border-radius: 10px;
+  &:hover{
+    background: $background-color-2;
+    color: $font-color;
+  }
+
+}
+
