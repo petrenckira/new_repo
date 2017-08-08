@@ -303,3 +303,9 @@
   align-self: @align;
 }
 
+.media-tablet(@maxWidth; @rules) {
+  @media screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
+

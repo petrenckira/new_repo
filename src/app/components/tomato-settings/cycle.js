@@ -2,99 +2,90 @@
  * Created by Iryna_Petrenko1 on 7/6/2017.
  */
 
-var div = document.querySelector("#cycle");
-var SettingsControls = new SettingsControls();
-var settingsBlock = document.querySelector(".pomodoro-settings-bloks");
-settingsBlock.addEventListener("click", SettingsControls.changeValue);
-function drawing() {
-  var settings = new Cycle(getItemsValues());
-  div.setAttribute("style", settings.getCssRool());
-}
-settingsBlock.addEventListener("click", drawing);
-window.onload = drawing;
+class Cycle {
+  constructor(options) {
+    this.workTime = options.workTime;
+    this.shortBreak = options.shortBreak;
+    this.workIteration = options.workIteration;
+    this.longBreak = options.longBreak;
+    this.allTime = ((this.workTime + this.shortBreak) * ( this.workIteration - 1) + this.workTime) * 2 + this.longBreak;
+    this.workColor = "#ffb200";
+    this.shortBreakColor = "#59abe3";
+    this.longBreakColor = "#b470d0";
+    this.workTimeWigth = this.getPartWidth(this.allTime, this.workTime);
+    this.shortBreakWigth = this.getPartWidth(this.allTime, this.shortBreak);
+    this.longBreakWigth = this.getPartWidth(this.allTime, this.longBreak);
+    this.str = "background-image: linear-gradient( to right, ";
+    this.hoarder = 0;
+    this.widthTmp = 0;
+  }
 
-function Cycle(options) {
-  var workTime = options.workTime;
-  var shortBreak = options.shortBreak;
-  var workIteration = options.workIteration;
-  var longBreak = options.longBreak;
-  var allTime = ((workTime + shortBreak) * (workIteration - 1) + workTime) * 2 + longBreak;
-  var workColor = "#ffb200";
-  var shortBreakColor = "#59abe3";
-  var longBreakColor = "#b470d0";
-  var workTimeWigth = getPartWidth(allTime, workTime);
-  var shortBreakWigth = getPartWidth(allTime, shortBreak);
-  var longBreakWigth = getPartWidth(allTime, longBreak);
-  var str = "background-image: linear-gradient( to right, ";
-  var hoarder = 0;
-  var widthTmp = 0;
-
-  function getPartWidth(allWidth, part) {
+  getPartWidth(allWidth, part) {
     return (part / allWidth) * 100;
   }
 
-  function createPartCssRool() {
-    for (var i = 0; i < workIteration; i++) {
+  createPartCss() {
+    for (var i = 0; i < this.workIteration; i++) {
       if (i == 0) {
-        widthTmp = hoarder + workTimeWigth;
-        str += workColor + " " + hoarder + "%, " + workColor + " " + widthTmp + "%, ";
-        hoarder = widthTmp;
+        this.widthTmp = this.hoarder + this.workTimeWigth;
+        this.str += this.workColor + " " + this.hoarder + "%, " + this.workColor + " " + this.widthTmp + "%, ";
+        this.hoarder = this.widthTmp;
       }
       else {
-        widthTmp = hoarder + shortBreakWigth;
-        str += shortBreakColor + " " + hoarder + "%, " + shortBreakColor + " " + widthTmp + "%, ";
-        hoarder = widthTmp;
-        widthTmp = hoarder + workTimeWigth;
-        str += workColor + " " + hoarder + "%, " + workColor + " " + widthTmp + "%, ";
-        hoarder = widthTmp;
+        this.widthTmp = this.hoarder + this.shortBreakWigth;
+        this.str += this.shortBreakColor + " " + this.hoarder + "%, " + this.shortBreakColor + " " + this.widthTmp + "%, ";
+        this.hoarder = this.widthTmp;
+        this.widthTmp = this.hoarder + this.workTimeWigth;
+        this.str += this.workColor + " " + this.hoarder + "%, " + this.workColor + " " + this.widthTmp + "%, ";
+        this.hoarder = this.widthTmp;
       }
     }
   }
 
-  function createCssRool() {
-    createPartCssRool();
-    widthTmp = hoarder + longBreakWigth;
-    str += longBreakColor + " " + hoarder + "%, " + longBreakColor + " " + widthTmp + "%, ";
-    hoarder = widthTmp;
-    createPartCssRool();
-    var str2 = str.slice(0, -2) + ")";
-    createTimeItemsBottom();
-    createTimeItemsTop();
+  createCss() {
+    this.createPartCss();
+    this.widthTmp = this.hoarder + this.longBreakWigth;
+    this.str += this.longBreakColor + " " + this.hoarder + "%, " + this.longBreakColor + " " + this.widthTmp + "%, ";
+    this.hoarder = this.widthTmp;
+    this.createPartCss();
+    let str2 = this.str.slice(0, -2) + ")";
+    this.createTimeItemsBottom();
+    this.createTimeItemsTop();
     return str2;
 
   }
 
-  function createTimeItemsBottom() {
-    var k = 0;
-    var width = 0;
-    var fragment = document.createDocumentFragment();
-    var widthItem = (100 * 30) / allTime;
-    while (k < allTime - 30) {
+  createTimeItemsBottom() {
+    let k = 0;
+    let width = 0;
+    let fragment = document.createDocumentFragment();
+    let widthItem = (100 * 30) / this.allTime;
+    while (k < this.allTime - 30) {
       width += widthItem;
-      var p = document.createElement("p");
+      let p = document.createElement("p");
       k += 30;
-      var tmp = convertToHours(k);
+      let tmp = this.convertToHours(k);
       p.innerHTML = tmp;
       p.setAttribute("style", "left: " + (width) + "%");
       fragment.appendChild(p);
     }
-    var timeLine = document.querySelector("#time-line");
+    let timeLine = document.querySelector("#time-line");
     timeLine.innerHTML = "";
     console.log(timeLine);
     timeLine.appendChild(fragment);
   }
 
-  function createTimeItemsTop() {
-    var phaseTime = document.querySelector("#phase-time");
-    var fragment = document.createDocumentFragment();
-    var start = 0 + "m";
-    var end = convertToHours(allTime);
-    var firstCycle = (((workTime + shortBreak) * (workIteration - 1)) + workTime) + longBreak;
-    var position = (100 * firstCycle) / allTime;
-    firstCycle = "First cycle: " + convertToHours(firstCycle);
-    var first = document.createElement("p");
-    var last = document.createElement("p");
-    var cycle = document.createElement("p");
+  createTimeItemsTop() {
+    let phaseTime = document.querySelector("#phase-time");
+    let fragment = document.createDocumentFragment();
+    let start = 0 + "m";
+    let end = this.convertToHours(this.allTime);
+    let firstCycle = (((this.workTime + this.shortBreak) * (this.workIteration - 1)) + this.workTime) + this.longBreak;
+    let position = (100 * firstCycle) / this.allTime;
+    firstCycle = "First cycle: " + this.convertToHours(firstCycle);
+    let first = document.createElement("p");
+    let last = document.createElement("p");
+    let cycle = document.createElement("p");
     first.innerHTML = start;
     first.setAttribute("style", "left: " + 0);
     fragment.appendChild(first);
@@ -108,13 +99,13 @@ function Cycle(options) {
     phaseTime.appendChild(fragment);
   }
 
-  function convertToHours(k) {
-    var str = "";
+  convertToHours(k) {
+    let str = "";
     if (k >= 60) {
-      var hours = Math.floor(k / 60);
+      let hours = Math.floor(k / 60);
       str = hours + "h ";
       if (k % 60 !== 0) {
-        var minutes = k - hours * 60;
+        let minutes = k - hours * 60;
         str += minutes + "m";
       }
     }
@@ -125,44 +116,40 @@ function Cycle(options) {
     return str;
   }
 
-  return {
-    getCssRool: function () {
-      return createCssRool();
-    }
-  }
 }
 
-function SettingsControls() {
 
-  function changeValue(event) {
-    var current = event.target;
+class SettingsControls {
+  changeValue(event) {
+    console.log(this);
+    let current = event.target;
     if (current.className == "icon-add") {
-      var obj = setNewValue("plus", current);
-      var value = obj.value;
-      var valueBlock = obj.valueBlock;
+      let obj = this.setNewValue( "plus", current);
+      let value = obj.value;
+      let valueBlock = obj.valueBlock;
       valueBlock.innerHTML = value;
     }
     if (current.className == "icon-minus") {
-      setNewValue("minus", current);
-      var obj = setNewValue("minus", current);
-      var value = obj.value;
-      var valueBlock = obj.valueBlock;
+      this.setNewValue("minus", current);
+      let obj = this.setNewValue("minus", current);
+      let value = obj.value;
+      let valueBlock = obj.valueBlock;
       valueBlock.innerHTML = value;
     }
   }
 
-  function setNewValue(action, current) {
-    var parent = current.parentElement.parentElement;
-    var valueBlock = parent.querySelector(".pomodoro-settings-block__value");
-    var value = +valueBlock.innerHTML;
-    var obj = getParams(valueBlock);
+  setNewValue(action, current) {
+    let parent = current.parentElement.parentElement;
+    let valueBlock = parent.querySelector(".pomodoro-settings-block__value");
+    let value = +valueBlock.innerHTML;
+    let obj = this.getParams(valueBlock);
     if (action == "plus") {
-      if (validate(obj, value, action)) {
+      if (this.validate(obj, value, action)) {
         value += obj.step;
       }
     }
     if (action == "minus") {
-      if (validate(obj, value, action)) {
+      if (this.validate(obj, value, action)) {
         value = value - obj.step;
       }
     }
@@ -172,7 +159,7 @@ function SettingsControls() {
     }
   }
 
-  function validate(obj, value, action) {
+  validate(obj, value, action) {
     if ((value < obj.max && action == "plus") || (value > obj.min && action == "minus")) {
       return true;
     }
@@ -181,7 +168,7 @@ function SettingsControls() {
     }
   }
 
-  function getParams(value) {
+  getParams(value) {
     if (value.id == "work-time") {
       return {
         min: 15,
@@ -211,25 +198,46 @@ function SettingsControls() {
       }
     }
   }
-
-  return {
-    changeValue: changeValue
-  }
 }
 
-function getItemsValues() {
-  var arr = document.querySelectorAll(".pomodoro-settings-block__value");
-  var arrValues = [];
-  for (var i = 0; i < arr.length; i++) {
-    arrValues[i] = +arr[i].innerHTML;
+export default class CycleAll {
+  constructor() {
+    this.settingsControll = new SettingsControls();
+    this.div = document.querySelector("#cycle");
+    this.settingsBlock = document.querySelector(".pomodoro-settings-bloks");
+    this.renderingAll();
+    this.drawing();
   }
-  return {
-    workTime: arrValues[0],
-    shortBreak: arrValues[2],
-    workIteration: arrValues[1],
-    longBreak: arrValues[3]
+
+  renderingAll() {
+    if (this.settingsBlock && this.div) {
+      this.settingsBlock.addEventListener("click", this.settingsControll.changeValue.bind(this.settingsControll));
+      this.settingsBlock.addEventListener("click", this.drawing.bind(this));
+      // this.settingsBlock.addEventListener("load", this.drawing.bind(this));
+    }
   }
+
+  drawing() {
+    const settings = new Cycle(this.getItemsValues());
+    this.div.setAttribute("style", settings.createCss());
+  }
+
+  getItemsValues() {
+    let arr = document.querySelectorAll(".pomodoro-settings-block__value");
+    let arrValues = [];
+    for (let i = 0; i < arr.length; i++) {
+      arrValues[i] = +arr[i].innerHTML;
+    }
+    return {
+      workTime: arrValues[0],
+      shortBreak: arrValues[2],
+      workIteration: arrValues[1],
+      longBreak: arrValues[3]
+    }
+  }
+
 }
+
 
 
 
