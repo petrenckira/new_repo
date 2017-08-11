@@ -1,0 +1,57 @@
+/* Styles here */
+#drop-zone,
+#output-result{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 600px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: auto;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.item{
+    margin: 40px 0;
+    padding: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    width: 25%;
+    height: auto;
+}
+.info{
+    width: 55%;
+}
+.hidden{
+    display: none;
+}
+.green{
+    background: rgba(0, 128, 0, 0.29);
+}
+.dotted{
+   border: green;
+}
+.controls{
+    width: 45%;
+    margin:40px;
+}
+.progress{
+    width: 80%;
+    height: 20px;
+    border: 2px solid black;
+    font-size: 0;
+}
+.part{
+    vertical-align: middle;
+    display: inline-block;
+    background: #008000;
+    height:100%;
+}
