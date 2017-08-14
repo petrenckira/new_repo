@@ -1,6 +1,6 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const firebase = require('firebase');
 module.exports = {
 
   entry: {
@@ -10,30 +10,51 @@ module.exports = {
     path: __dirname,
     filename: 'bundle.js'
   },
-  resolve: {
-    alias: {
-      '@less-helpers-module': path.resolve('src/assets/less/helpers'),  // alias for less helpers
-      '@images-root-path': path.resolve('src/assets/images')            // alias for images path
-    }
-  },
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
+      },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader!less-loader'})
       },
       {
         test: /\.(jpe?g|png)$/,
         loader: 'url-loader?limit=10000&name=images/[name].[ext]'
       },
       {
-        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
-        loader: 'file'
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
+      },
+      {
+        test: /\.hbs$/,
+        loader: "handlebars-loader",
+      },
+      {
+        test: /\.handlebars$/,
+        loader: "handlebars-loader"
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin({filename: 'styles.css', disable: false, allChunks: true})
   ],
-  watch: true
+  resolve: {
+    alias: {
+      '@less-helpers-module': path.resolve('src/assets/less/helpers'),
+      '@images-root-path': path.resolve('src/assets/images')
+    }
+  },
+
 };

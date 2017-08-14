@@ -1,0 +1,94 @@
+<main class="tasks">
+    <ul class="list status-list">
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">To Do</a></li>
+        <li class="item status-list__item"><a href="" title="" class="link state-list__link">Done</a></li>
+    </ul>
+  {{#each this}}
+      <!--todo-->
+    {{#if toDo}}
+        <div class="task task--{{category}}">
+            <div class="task__time">{{date}}</div>
+            <div class="task__description">
+                <h2 class="task__headline task__headline--{{priority}}">{{headline}}</h2>
+                <p class="task__text">{{text}}</p>
+            </div>
+            <div class="task__buttons">
+
+
+                <button class="button task__button-edit"><span class="icon-edit"></span></button>
+            </div>
+            <div class="task__priority task__priority--{{priority}}">
+                <span class="task__icon-tomato icon-tomato"></span>
+                <span class="task__tomato-value">{{value}}</span>
+            </div>
+        </div>
+    {{/if}}
+  {{/each}}
+    <!--todo-->
+
+
+    <!--done-->
+  {{#each this}}
+    {{#if Done}}
+        <div class="task task--{{category}} task--done">
+            <div class="task__time">{{date}}</div>
+            <div class="task__description">
+                <h2 class="task__headline task__headline--{{priority}} task__headline--done">{{headline}}</h2>
+                <p class="task__text">{{text}}</p>
+            </div>
+            <div class="task__buttons task__buttons--done">
+
+                <button class="button task__button-edit"><span class="icon-edit"></span></button>
+            </div>
+            <div class="task__priority task__priority--{{priority}}">
+                <span class="task__icon-tomato icon-tomato"></span>
+                <span class="task__tomato-value">{{value}}</span>
+            </div>
+        </div>
+
+    {{/if}}
+  {{/each}}
+    <!--done-->
+    <p class="global-list">
+        <a href="" class="link global-list__link" title="">Global List<span
+                class="icon-global-list-arrow-right"></span></a>
+    </p>
+
+    <div class="categories">
+        <ul class="list categories-list">
+            <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">All</a></li>
+            <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">Urgent</a>
+            </li>
+            <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">High</a></li>
+            <li class="item categories-list__item"><a href="" title="" class="link categories-list__link">Middle</a>
+            </li>
+            <li class="item categories-list__item"><a href="" title="" class="link categories__link">Low</a></li>
+        </ul>
+        <br>
+        <!--global-->
+      {{#each this}}
+        {{#if Global}}
+            <div class="category category--{{category}}">
+                <h2 class="category-headline category-headline--{{category}}">{{category}}</h2>
+
+                <div class="task task--{{category}}">
+                    <div class="task__time"><p class="task__date">{{date}}</p></div>
+                    <div class="task__description">
+                        <h2 class="task__headline task__headline--{{priority}}">{{headline}}</h2>
+                        <p class="task__text">{{text}}</p>
+                    </div>
+                    <div class="task__buttons">
+                        <button class="button task__button-arr-up"><span class="icon-arrows-up"></span></button>
+                        <button class="button task__button-edit"><span class="icon-edit"></span></button>
+                    </div>
+                    <div class="task__priority task__priority--{{priority}}">
+                        <span class="task__icon-tomato icon-tomato"></span>
+                        <span class="task__tomato-value">{{value}}</span>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+      {{/each}}
+        <!--global-->
+    </div>
+</main>

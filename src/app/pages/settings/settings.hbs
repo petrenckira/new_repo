@@ -1,0 +1,74 @@
+<main>
+    <section class="pomodoro-settings">
+        <h2 id="pomodoro-settings-headline" class="headline pomodoro-settings__headline">Pomodoros settings</h2>
+        <h2 id="categories-settings-headline" class="headline pomodoro-settings__headline hidden">Categories settings</h2>
+        <ul class="list status-list">
+            <li  class="item status-list__item "><a id="settings-pomodoros" href="#settings" title="Pomodoros" class="link state-list__link active">Pomodoros</a></li>
+            <li class="item status-list__item"><a  id="settings-categories" href="#settings" title="Categories" class="link state-list__link">Categories</a></li>
+        </ul>
+      <div id="pomodoro-settings-tab">
+          <div class="pomodoro-settings-bloks">
+              <div class="pomodoro-settings-block pomodoro-settings-block--work">
+                  <h3 class="pomodoro-settings-block__headline">work time</h3>
+                  <div class="pomodoro-settings-block__controls">
+                      <button class="button pomodoro-settings-block__minus" type="button"><span class="icon-minus"></span></button>
+                      <span id="work-time" class="pomodoro-settings-block__value">25</span>
+                      <button class="button pomodoro-settings-block__plus " type="button"><span class="icon-add"></span></button>
+                  </div>
+                  <p class="pomodoro-settings-block__caption">Please select a value between 15 and 25 <span class="pomodoro-settings-block__word">minutes</span></p>
+              </div>
+
+              <div class="pomodoro-settings-block pomodoro-settings-block--other">
+                  <h3 class="pomodoro-settings-block__headline">work iteration</h3>
+                  <div class="pomodoro-settings-block__controls">
+                      <button class="button pomodoro-settings-block__minus" type="button"><span class="icon-minus"></span></button>
+                      <span id="work-iteration" class="pomodoro-settings-block__value">2</span>
+                      <button class="button pomodoro-settings-block__plus " type="button"><span class="icon-add"></span></button>
+                  </div>
+                  <p class="pomodoro-settings-block__caption">Please select a value between 2 and 5 <span class="pomodoro-settings-block__word">minutes</span></p>
+              </div>
+              <div class="pomodoro-settings-block pomodoro-settings-block--education">
+                  <h3 class="pomodoro-settings-block__headline">short break</h3>
+                  <div class="pomodoro-settings-block__controls">
+                      <button class="button pomodoro-settings-block__minus" type="button"><span class="icon-minus"></span></button>
+                      <span id="short-break" class="pomodoro-settings-block__value">5</span>
+                      <button class="button pomodoro-settings-block__plus " type="button"><span class="icon-add"></span></button>
+                  </div>
+                  <p class="pomodoro-settings-block__caption ">Please select a value between 3 and 5 <span class="pomodoro-settings-block__word">minutes</span></p>
+              </div>
+              <div class="pomodoro-settings-block pomodoro-settings-block--hobby">
+                  <h3 class="pomodoro-settings-block__headline">long break</h3>
+                  <div class="pomodoro-settings-block__controls">
+                      <button class="button pomodoro-settings-block__minus" type="button"><span class="icon-minus"></span></button>
+                      <span id="long-break" class="pomodoro-settings-block__value">30</span>
+                      <button class="button pomodoro-settings-block__plus " type="button"><span class="icon-add"></span></button>
+                  </div>
+                  <p class="pomodoro-settings-block__caption">Please select a value between 15 and 30 <span class="pomodoro-settings-block__word">minutes</span></p>
+              </div>
+          </div>
+          <h3 class="pomodoro-settings__caption">Your cycle</h3>
+          <p id="phase-time"></p>
+          <div id="cycle"></div>
+          <p id="time-line"></p>
+          <p id="some"></p>
+          <div class="button-bottom-set">
+              <a href="#task-list" title="Go to tasks" class="button button-bottom button-bottom--blue">Go to tasks</a>
+              <button class="button button-bottom button-bottom--green">Save</button>
+          </div>
+      </div>
+    </section>
+    <section class="category-settings">
+        <div id="category-settings-tab" class="hidden">
+            <ul class="category-settings-list">
+                <li class="item category-settings-list__item category-settings-list__item--work">Work</li>
+                <li class="item category-settings-list__item category-settings-list__item--education">Education</li>
+                <li class="item category-settings-list__item category-settings-list__item--hobby">Hobby</li>
+                <li class="item category-settings-list__item category-settings-list__item--sport">Sport</li>
+                <li class="item category-settings-list__item category-settings-list__item--other">Other</li>
+            </ul>
+            <div class="button-bottom-set">
+                <a href="#task-list" title="go to tasks" class="button button-bottom button-bottom--blue">Go to tasks</a>
+            </div>
+        </div>
+    </section>
+</main>
