@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*custom styles jquery ui start*/
+.nano .pane {
+  background: #888;
+}
+
+.nano .slider {
+  background: #111;
+}
+
+.ui-dialog .ui-widget-header {
+  background: rgba(111, 26, 65, 0.9);
+  color: rgba(233, 212, 255, 0.62);
+}
+
+/*custom styles jquery ui end*/
+
+/*custom user styles start*/
+body {
+  padding: 20px;
+  background-color: #374a5d;
+}
+
+#todo-app {
+  width: 1060px;
+  min-height: 100%;
+  margin: 0 auto;
+  border: 0;
+  background-color: transparent;
+}
+
+.todo-header {
+  margin-bottom: 15px;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.task-list {
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 250px;
+  min-height: 240px;
+  padding: 5px;
+  margin: 0 5px;
+  background-color: #e3e3e3;
+}
+
+.task-list > p {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: rgba(233, 212, 255, 0.62);
+  background-color: rgba(111, 26, 65, 0.9);
+  box-shadow: 0 0 0 5px rgba(111, 26, 65, 0.9);
+}
+
+.task-list input,
+.task-list textarea {
+  margin: 1px 0;
+}
+
+.task-list input {
+  height: 30px;
+}
+
+.todo-task {
+  position: relative;
+  width: 100%;
+  margin: 5px 0;
+  color: #33689e;
+  background-color: #fff;
+}
+
+.todo-task li {
+  padding: 3px 5px;
+}
+
+.todo-task > .task-header {
+  font-weight: bold;
+}
+
+.todo-task > .task-date {
+  font-size: small;
+  font-style: italic;
+}
+
+.todo-task > .task-description {
+  font-size: smaller;
+}
+
+#todo-form {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#todo-form input,
+#todo-form textarea {
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 3em;
+  margin: 0 0 0.5em 0;
+  padding: 0.75em;
+  font: 14px "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  color: #262626;
+  background-color: rgba(255, 255, 255, 0.42);
+  border: 1px solid #dcdcdc;
+  -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+#todo-form input:focus,
+#todo-form textarea:focus {
+  background: #fafafa;
+  outline: none;
+}
+
+.btn {
+  display: block;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 49px;
+  padding: 17px 32px 16px;
+  margin-bottom: 5px;
+  font: bold 16px "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(28, 148, 198);
+  border: none;
+  transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+  background-color: rgb(198, 112, 106);
+  cursor: pointer;
+}
+
+.remove-todo-container {
+  display: none;
+  height: 75px;
+  text-align: center;
+  color: rgba(111, 26, 65, 0.9);
+  background-color: #fff;
+  border: 3px dotted #000;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*custom user styles end*/

@@ -1,0 +1,14 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "DESCRIPTION:\r Practice documenting well-written code",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc js/backbone.js -d result"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.5.4"
+  }
+}

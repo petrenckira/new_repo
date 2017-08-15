@@ -1,0 +1,29 @@
+/* Styles here */
+.content {
+    border: 1px solid gray;
+}
+.content-block {
+    min-height: 400px;
+    outline: 1px solid gray; /*remove this property*/
+}
+.active{
+    background: grey;
+}
+.hidden{
+    display: none;
+}
+.tabs li{
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+
+}
+.tabs li a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px ;
+}
+.tabs{
+    display: flex;
+}

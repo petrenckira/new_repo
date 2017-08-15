@@ -1,0 +1,60 @@
+.form-holderArea {
+    padding: 20px;
+}
+
+#name {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    padding-bottom: 25px;
+    clear: both;
+}
+
+label {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.second_nameClass {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+label[for="info_block"] {
+    padding: 0 20px 0 0;
+}
+
+#details p {
+    padding: 0;
+    margin: 0;
+}
+
+.SubmitButton {
+    bottom: 10px;
+    left: 467px;
+    position: absolute;
+}
+
+#success-PopUpOverlay {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0px;
+    bottom: 0;
+    background: #000;
+    opacity: .2;
+}
+
+/* style for error */
+.error {
+    -webkit-box-shadow: 0 0 1px 1px red;
+    -moz-box-shadow: 0 0 1px 1px red;
+    box-shadow: 0 0 1px 1px red
+}

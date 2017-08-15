@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>AngelPrime to-do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/jquery.ui.min.css"/>
+    <link rel="stylesheet" href="css/todo.css"/>
+  </head>
+
+  <body>
+    <main>
+      <article id="todo-app">
+        <!--Todo component will be here!-->
+      </article>
+    </main>
+
+    <div class="loader"></div>
+
+    <script id="todo-item-tpl" type="x-tmpl-mustache">
+      <li class="todo-task" data-todo-id={{id}}>
+        <ul>
+          <li class="task-header">{{title}}</li>
+          {{#date}}
+            <li class="task-date"><time>{{date}}</time></li>
+          {{/date}}
+          {{#description}}
+            <li class="task-description">{{description}}</li>
+          {{/description}}
+        </ul>
+      </li>
+    </script>
+
+    <script id="todo-component-tpl" type="x-tmpl-mustache">
+      <section class="todo-wrapper">
+
+        <header class="todo-header">{{title}}</header>
+
+        <section class="task-list" id="pending">
+          <p><strong>Pending</strong></p>
+          <ul class="todo-data"></ul>
+        </section>
+
+        <section class="task-list" id="inProgress">
+          <p><strong>In Progress</strong></p>
+          <ul class="todo-data"></ul>
+        </section>
+
+        <section class="task-list" id="completed">
+          <p><strong>Completed</strong></p>
+          <ul class="todo-data"></ul>
+        </section>
+
+        <section class="task-list">
+          <p><strong>Add a task</strong></p>
+
+          <form id="todo-form">
+            <input type="text" name="todo-title" placeholder="Title"/>
+            <textarea name="todo-description" placeholder="Description"></textarea>
+            <input id="datepicker" name="todo-date" type="text" placeholder="Due Date (dd/mm/yyyy)"/>
+          </form>
+          <button class="btn btn-add btn-primary">Add Task</button>
+          <button class="btn btn-primary remove-all">Clear Data</button>
+          <button class="btn remove-todo-container">Drag Here to Delete</button>
+        </section>
+
+      </section>
+    </script>
+
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.ui.min.js"></script>
+    <script type="text/javascript" src="js/libs/mustache.min.js"></script>
+    <script src="js/utils/extend.js"></script>
+    <script src="js/utils/pubSub.js"></script>
+    <script type="text/javascript" src="js/Todo/TodoModel.js"></script>
+    <script type="text/javascript" src="js/Todo/TodoCollection.js"></script>
+    <script type="text/javascript" src="js/Todo/TodoDB.js"></script>
+    <script type="text/javascript" src="js/Todo/TodoView.js"></script>
+    <script type="text/javascript" src="js/Todo/TodoController.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

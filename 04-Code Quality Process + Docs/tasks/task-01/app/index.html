@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fix me, please</title>
+        <link rel="stylesheet" href="src/css/styles.css"/>
+        <script src="src/js/jquery-2.1.4.min.js"></script>
+    </head>
+
+    <body style="font-family: Arial, Helvetica, sans-serif, serif;">
+    <form><div class="form-holderArea" style="margin: 20px auto; width: 500px;
+     background: #DDDDDD; position: relative;">
+            <h1 style="color: black;">Send request:
+              </h1>
+           <div class="formMain">
+              <p><label for="name">Name: <br><small>(min 3 characters length)</small></label>
+                  <input type="text" id="name" class="input_name"></p>
+
+                <p>    <label for="second_name">Second name: <br>
+                    <small>(min 3 characters length)</small></label>
+                 <input type="text" id="second_name" class="second_nameClass">
+                </p>
+                <p> <label for="details_block">Add details:</label>
+                  <input type="checkbox" id="details_block" class="input_name">
+                   <button class="SubmitButton" type="submit">
+                Send</button>
+                </p>
+         </div>
+        </div>
+    </form>
+
+    <script src="src/js/main.js"></script>
+    <style>
+        .successHolder{
+            margin-left: -100px;
+          margin-top: -90px;
+            left: 50%;
+        top: 50%;
+        opacity: 1;}
+        .successHolder { padding: 40px;position: relative;-webkit-box-shadow: 2px 3px 6px 2px grey;-moz-box-shadow: 2px 3px 6px 2px grey;box-shadow: 2px 3px 6px 2px grey; }
+        .successHolder button { position: absolute; top: 130px;right: 40px;}
+    </style>
+
+   </body>
+</html>
