@@ -1,0 +1,27 @@
+1.I Used Performance and Memory to analyze to find memory leaks.
+I made 3 records in the memory tab.
+On records  we can see, that memory leaks in function grow and memory does not become free,
+because we have reference to string all time.
+2.I think in this place is memory leaks:
+ var x = [];
+Garbage Collector does not free up memory, because it is a global variable.
+New code:
+
+"use strict"
+function createSomeNodes() {
+    var div,
+        i = 100,
+        frag = document.createDocumentFragment();
+    for (;i > 0; i--) {
+        div = document.createElement("div");
+        div.appendChild(document.createTextNode(i + " - "+ new Date().toTimeString()));
+        frag.appendChild(div);
+    }
+    document.getElementById("nodes").appendChild(frag);
+}
+function grow() {
+    var x = [];
+    x.push(new Array(1000000).join('x'));
+    createSomeNodes();
+    setTimeout(grow,1000);
+}
