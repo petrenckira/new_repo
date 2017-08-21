@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        title Main
+        -var styles=["css/all.css"]
+        each val in styles
+            link(
+                rel="stylesheet"
+                href=val
+            )
+    body
+        form.form-inline#form
+            div.form-group
+                input.form-control#first-number
+            div.form-group
+                input.form-control#second-number
+            button.btn Calculate sum and concatenate strings
+        div
+            p#concated-string
+            p#sum
+            -var scripts=["js/bundle.js"]
+        each val in scripts
+            script(src=val)

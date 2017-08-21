@@ -1,0 +1,35 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-c  ore": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "bootstrap-less": "^3.3.8",
+    "browser-sync": "^2.18.13",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-bootstrap-configurator": "^0.4.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-less-sourcemap": "^1.4.3",
+    "gulp-minify": "^1.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11",
+    "webpack-stream": "^4.0.0"
+  }
+}
