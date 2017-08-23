@@ -1,8 +1,10 @@
 var path = require('path');
+var webpack = require('webpack');
+var Highcharts = require('highcharts');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const firebase = require('firebase');
 module.exports = {
-
+  devtool:"eval",
   entry: {
     app: path.resolve('./src/app/app.js')
   },
@@ -48,7 +50,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({filename: 'styles.css', disable: false, allChunks: true})
+    new ExtractTextPlugin({filename: 'styles.css', disable: false, allChunks: true}),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ],
   resolve: {
     alias: {

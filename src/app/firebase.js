@@ -5,9 +5,13 @@
 let firebase = require("firebase/app");
 require("firebase/auth");
 require("firebase/database");
-
+let instance = null;
 export  default class Firebase {
   constructor() {
+    if (instance) {
+      return instance;
+    }
+    instance = this;
     this.config = {
       apiKey: "AIzaSyAfRG1QGmH82xBZ1UIBOJ2SQmonc4_TKgQ",
       authDomain: "pomodoro-3731c.firebaseapp.com",
@@ -17,10 +21,6 @@ export  default class Firebase {
       messagingSenderId: "506041088386"
     };
     this.init();
-    if (instance) {
-      return instance;
-    }
-    instance=this;
   }
 
   init() {
@@ -43,11 +43,21 @@ export  default class Firebase {
 
   }
 
-  writeTasks(TaskId, name, email, imageUrl) {
-    return firebase.database().ref('TaskListGlobal/' + TaskId).set({
-      username: name,
-      email: email,
-      profile_picture: imageUrl
+  writeTasks(options) {
+    try {
+      return firebase.database().ref('TaskListGlobal/').push(options);
+    }
+    catch (e) {
+      console.log(e.message);
+    }
+  }
+
+  changeSettings(obj) {
+    return firebase.database().ref('Settings/').set({
+      workTime: obj.workTime,
+      workIteration: obj.workIteration,
+      shortBreak: obj.shortBreak,
+      longBreak: obj.longBreak
     });
   }
 
@@ -56,7 +66,7 @@ export  default class Firebase {
     console.log(error);
   }
 }
-let instance = null;
+
 // init() {
 //   firebase.initializeApp(this.config);
 //   this.writeTasks(19, "name", "email", "url")
@@ -80,4 +90,14 @@ let instance = null;
 //     profile_picture: imageUrl
 //   });
 // }
+
+// Done: options.Do,
+// Global: options,
+// category: options,
+// date: options,
+// headline: options,
+// priority: options,
+// text:options,
+// toDo:options,
+// value:options
 

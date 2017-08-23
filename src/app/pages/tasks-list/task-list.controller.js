@@ -8,9 +8,11 @@ export default class TaskListController{
     this.model=model;
   }
   setList() {
+    console.log("it is render task list");
     this.model.getData().then(result=>{
       this.view.render(result);
     });
   }
+
 
 }

@@ -1,6 +1,7 @@
 /**
  * Created by Iryna_Petrenko1 on 7/28/2017.
  */
+require ('./../../components/tooltip/tooltip');
 import template from "./header.hbs";
 
 
@@ -16,6 +17,7 @@ export  default class HeaderView{
       let headerDom = parser.parseFromString(header, "text/html").querySelector("header");
       fragment.appendChild(headerDom);
       wrapper.appendChild(fragment);
+      $("header").tooltip();
     }
 
   }

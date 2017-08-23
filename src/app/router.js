@@ -1,11 +1,12 @@
 export default class Router {
   constructor() {
-    this.routers = new Map();
-    this.init();
     if (instance) {
       return instance;
     }
     instance=this;
+    this.routers = new Map();
+    this.init();
+
   }
 
   getHash() {
@@ -13,7 +14,6 @@ export default class Router {
     return url;
   }
   navigate(){
-    console.log("i am router");
     const url=this.getHash();
     this.routers.get(url)();
 

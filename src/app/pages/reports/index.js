@@ -9,6 +9,7 @@ import ReportsView from "./reports.view";
 import ReportsController from "./reports.controller";
 
 
+
 const router = new Router();
 export  default class Report {
   constructor() {

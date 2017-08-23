@@ -1,5 +1,5 @@
 <header class="header header--fixed">
-    <!--<div class="wrapper">-->
+    <div class="wrapper">
         <div class="list-container">
             <div class="logo"></div>
             <nav class="menu">
@@ -8,19 +8,19 @@
                             <!--class="icon-add"></span></a></li>-->
                     <li class="item menu-list__item"><a id="delete-task-item" class="link menu-list__link" href="#" title=""><span
                             class="icon-trash"></span></a></li>
-                    <li class="item menu-list__item"><a id="task-list-item" class="link menu-list__link" href="#task-list" title="task-list"><span
+                    <li class="item menu-list__item"><a id="task-list-item" class="link menu-list__link" href="#task-list" title="task-list" data-tooltip="Go to tasks"><span
                             class="icon-list"></span></a></li>
-                    <li class="item menu-list__item"><a id="report-item" class="link menu-list__link" href="#reports" title="delete"><span
+                    <li class="item menu-list__item"><a id="report-item" class="link menu-list__link" href="#reports"  data-tooltip="Go to reports"><span
                             class="icon-statistics"></span></a></li>
-                    <li class="item menu-list__item"><a id="settings-item" class="link menu-list__link" href="#settings" title="settings"><span
+                    <li class="item menu-list__item" ><a id="settings-item" class="link menu-list__link" href="#settings" data-tooltip="Go to settings" ><span
                             class="icon-settings"></span></a></li>
                 </ul>
             </nav>
         </div>
         <h1 class="headline">
           {{title}}
-            <button class="button headline-button" type="button"><span class="icon-add"></span></button>
+            <a class="button headline-button" href="#add-task"><span class="icon-add"></span></a>
         </h1>
-    <!--</div>-->
+    </div>
 </header>
 

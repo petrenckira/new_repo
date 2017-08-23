@@ -3,6 +3,7 @@
  */
 import template from "./reports.hbs";
 import EventBus from "./../../eventbus";
+import Chart from "./../../components/chart/chart";
 let eventBus = new EventBus();
 
 export default class SettingsView {
@@ -17,9 +18,9 @@ export default class SettingsView {
     fragment.appendChild(settingsDom);
     const main=document.querySelector("main");
     main?wrapper.replaceChild(fragment, main):wrapper.appendChild(fragment);
-    const cycle=new CycleAll();
-
-    const settingsTabs=new SettingTabs();
+    const chart=new Chart();
+    // const cycle=new CycleAll();
+    // const settingsTabs=new SettingTabs();
   }
 
 

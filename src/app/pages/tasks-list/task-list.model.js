@@ -3,42 +3,44 @@
  */
 import Firebase from "./../../firebase";
 let firebase = new Firebase();
-export default class TaskListModel{
+export default class TaskListModel {
   constructor() {
     this.storage = [];
-    this.toDo = [];
-    this.done = [];
-    this.sortedStorage=[];
+    this.sortedStorage = {
+      toDo: [],
+      done: [],
+      global: []
+    }
   }
 
-  addTasks(objTasks) {
-    for (let key in objTasks) {
-      this.storage.push(objTasks[key]);
+  addTaskstolocal(objTasks) {
+    this.storage = [];
+    let arrKeys = Object.keys(objTasks);
+    for (let i = 0; i < arrKeys.length; i++) {
+      objTasks[arrKeys[i]].id = arrKeys[i];
+      this.storage.push(objTasks[arrKeys[i]])
     }
   }
 
   createLists() {
-    this.global = this.storage.filter((item)=>item.Global == true);
-    this.toDo = this.storage.filter((item)=>item.toDo == true);
-    this.done = this.storage.filter((item)=>item.Done == true);
-  }
-  sertFlobal(){
-
+    this.sortedStorage.global = this.storage.filter((item)=>item.Global == true);
+    this.sortedStorage.toDo = this.storage.filter((item)=>item.toDo == true);
+    this.sortedStorage.done = this.storage.filter((item)=>item.Done == true);
   }
 
   getData() {
     return new Promise((resolve) => {
-      if (this.storage.length > 0) {
-        resolve(this.storage);
-      } else {
+      // if (this.storage.length > 0) {
+      //   resolve(this.storage);
+      // } else {
 
-        firebase.getDataFirebase("TaskListGlobal")
-          .then((snapshot) => {
-            this.addTasks(snapshot.val());
-            console.log(snapshot);
-            resolve(this.storage);
-          });
-      }
+      firebase.getDataFirebase("TaskListGlobal")
+        .then((snapshot) => {
+          this.addTaskstolocal(snapshot.val());
+          this.createLists();
+          resolve(this.sortedStorage);
+        });
+      // }
     });
   }
 
