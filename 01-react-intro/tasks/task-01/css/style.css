@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.search-block{
+    width: 50%;
+}
+input{
+    width: 60%;
+    height: 20px;
+}
+.search-button{
+    width: 30%;
+    height:25px;
+    margin: 20px;
+    text-align: center;
+}
+.search-res{
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #000;
+}
+.book{
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+.book h1{
+    font-size: 20px;
+    text-align: left;
+}
