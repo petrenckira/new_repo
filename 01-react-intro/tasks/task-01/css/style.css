@@ -19,14 +19,17 @@ input{
     margin: 20px;
     text-align: center;
 }
-.search-res{
+.search-res,
+.my-list{
     width: 50%;
     display: inline-block;
     border: 1px solid #000;
 }
 .book{
+    box-sizing: border-box;
     width: 100%;
     border-bottom: 2px solid #000;
+    padding: 20px;
 }
 .book h1{
     font-size: 20px;

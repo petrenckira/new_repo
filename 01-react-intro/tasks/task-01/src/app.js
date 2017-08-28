@@ -7,14 +7,46 @@ var ReactDOM = require("react-dom");
 class Book extends React.Component {
     constructor(props) {
         super(props);
-        this.title = props.title;
+        this.props = props;
     }
 
     render() {
         return (
             <div className="book">
-                <h1>{this.title}</h1>
-                <button type="button">Add</button>
+                <h1>{this.props.title}</h1>
+                <p>{this.props.subtitle}</p>
+                <img src={this.props.smallThumbnail}></img>
+                <p>{this.props.description}</p>
+                <p>{this.props.publishedDate}</p>
+                <p>{this.props.authors}</p>
+                <button onClick={this.addBook.bind(this)} type="button">Add</button>
+            </div>
+        )
+    }
+}
+class MyList extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="my-list">
+                {
+                    this.props.myBooks.map((book)=> {
+                        return (
+                            <Book
+                                key={book.id}
+                                title={book.volumeInfo.title}
+                                subtitle={book.volumeInfo.subtitle}
+                                smallThumbnail={book.volumeInfo.imageLinks.smallThumbnail}
+                                description={book.volumeInfo.description}
+                                publishedDate={book.volumeInfo.publishedDate}
+                                authors={book.volumeInfo.authors}
+                            />
+                        )
+                    })
+                }
             </div>
         )
     }
@@ -24,7 +56,6 @@ class Book extends React.Component {
 class SearchResult extends React.Component {
     constructor(props) {
         super(props);
-        this.books = props.books;
     }
 
     render() {
@@ -32,11 +63,16 @@ class SearchResult extends React.Component {
             <div className="search-res">
 
                 {
-                    this.books.map((book)=> {
+                    this.props.books.map((book)=> {
                         return (
                             <Book
                                 key={book.id}
                                 title={book.volumeInfo.title}
+                                subtitle={book.volumeInfo.subtitle}
+                                smallThumbnail={book.volumeInfo.imageLinks.smallThumbnail}
+                                description={book.volumeInfo.description}
+                                publishedDate={book.volumeInfo.publishedDate}
+                                authors={book.volumeInfo.authors}
                             />
                         )
                     })
@@ -51,7 +87,8 @@ class App extends React.Component {
         super();
         this.state = {
             text: '',
-            books: []
+            books: [],
+            myBooks: []
         }
 
     }
@@ -62,23 +99,24 @@ class App extends React.Component {
 
     getDataBook(e) {
         e.preventDefault();
-        let that=this;
-        this.setState({
-            books:[]
-        });
-        this.state.books = [];
+
         fetch('https://www.googleapis.com/books/v1/volumes?q=' + this.state.text)
             .then((response) => response.json())
             .then((res)=> {
-                that.setState({
-                    books:res
+                this.setState({
+                    books: res.items
                 });
-                // this.state.books = res;
-                ReactDOM.render(<SearchResult books={this.state.books.items}/>, document.querySelector("#search-res-container"));
+                console.log(res.items);
+
             })
             .catch((er)=> {
                 console.log(er);
             });
+    }
+
+    addBook(id){
+
+
     }
 
 
@@ -91,12 +129,17 @@ class App extends React.Component {
                         placeholder="Enter your note here..."
                         onChange={this.handleTextChange.bind(this)}
                     />
-                    <button className="search-button" type="button" onClick={this.getDataBook.bind(this)}>Search</button>
+                    <button className="search-button" type="button" onClick={this.getDataBook.bind(this)}>Search
+                    </button>
                 </div>
                 <h1>Search Result:</h1>
-                <div id="search-res-container"></div>
-                {/*<SearchResult/>*/}
-                {/*<MyList/>*/}
+                {
+                    this.state.books.length ? <SearchResult books={this.state.books}/> : null
+                }
+                {
+                    this.state.books.length ? <MyList books={this.state.myBooks}/> : null
+                }
+
             </div>
         )
     }
