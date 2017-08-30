@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div ng-controller="appController" id="container" class="container">
+        <div class="search-block">
+            <input ng-model="query" type="text" placeholder="Enter your note here..."/>
+            <button ng-click="loadData(query)" class="search-button" type="button">Search</button>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h1>Search Result:</h1>
+                <div class="search-res" >
+                    <div ng-repeat="book in books" class="book" render-books></div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <h1>My List:</h1>
+                <div class="my-list" >
+                    <div ng-repeat="book in myList" class="book" render-books></div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>

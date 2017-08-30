@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.search-block{
+    width: 40%;
+}
+input{
+    width: 60%;
+    height: 20px;
+}
+.search-button{
+    width: 30%;
+    height:25px;
+    margin: 20px;
+    text-align: center;
+}
+.search-res,
+.my-list{
+
+    border: 1px solid #000;
+}
+.book{
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    padding: 20px;
+}
+.book h1{
+    font-size: 20px;
+    text-align: left;
+}
+.book-container{
+    width: 100%;
+}
+
+.book-button{
+    width: 40%;
+    float: right;
+
+
+}
+.flex-container,
+.book-container{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-item{
+    width: 40%;
+
+}
+.book-img{
+    width: 40%;
+}
+.book-text{
+    width: 60%;
+}
+h1,
+h3{
+    padding: 10px 0;
+}
