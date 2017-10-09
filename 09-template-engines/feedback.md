@@ -1,1 +1,0 @@
-Not bad. Have not seen lodash. Use handlebars helpers and lodash partial ????
