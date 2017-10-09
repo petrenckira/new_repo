@@ -1,0 +1,31 @@
+.control-size {
+    width: 23%;
+
+}
+
+
+.uui-person-vertical-profile .person-profile-footer {
+    padding: 0;
+    height: 200px;
+}
+.uui-person-vertical-profile{
+    height: auto;
+    margin: 10px;
+}
+.uui-person-vertical-profile .person-profile-footer .person-profile-section{
+    display: block;
+}
+.color-visible{
+    opacity: 0;
+    margin: 10px;
+    float: right;
+}
+.uui-modal .modal-header{
+    text-align: center;
+}
+.uui-person-vertical-profile:hover .uui-button.lime-green{
+    opacity:1;
+}
+.uui-person-vertical-profile:hover .color-change {
+    background-color: #53d1ff;
+}

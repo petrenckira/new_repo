@@ -1,0 +1,32 @@
+<main class="container">
+    {{#each this}}
+        <div class="uui-person-vertical-profile control-size">
+            <div class="person-profile-body color-change">
+                <div class="person-profile-section">
+                    <div class="person-profile-info">
+                        <h2>Profile Card</h2>
+                    </div>
+                    <div class="person-profile-photo">
+                        <img src="/images/account-avatar.jpg" alt=""/>
+                        <!--<img src="images/account-avatar.jpg" height="1300" width="1300"/>-->
+                    </div>
+                </div>
+            </div>
+            <div class="person-profile-footer">
+                    <div class="person-profile-section">
+                        <h2>{{this.fullName}}</h2>
+                        <p>{{this.title}}</p>
+                    </div>
+
+
+                    <button class="uui-button lime-green transparent color-visible" data-toggle="modal" data-target="#popup1">
+                        Get Info
+                    </button>
+
+
+
+            </div>
+
+        </div>
+    {{/each}}
+</main>

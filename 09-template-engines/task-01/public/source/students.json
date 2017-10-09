@@ -1,0 +1,552 @@
+[
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  },
+  {
+    "employeeId": "4060741400035205617",
+    "fullName": "John Doe",
+    "title": "Student",
+    "email": "John_Doe@epam.com",
+    "phonesString": null,
+    "subordinateType": "solid",
+    "manager": {
+      "id": "4060741400007844073",
+      "name": "John Doe"
+    },
+    "unit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "ownUnit": {
+      "id": "4060741400008848514",
+      "name": "Unit Name, Karaganda"
+    },
+    "dottedManager": null,
+    "dottedUnit": null,
+    "fullLocation": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+    "profile": {
+      "employeeId": "4060741400035205617",
+      "fullname": "John Doe",
+      "uid": "516386",
+      "customId": null,
+      "gender": "M",
+      "title": "Student",
+      "status": "Intern",
+      "category": "Non-production",
+      "location": "CIS, Country, City, StreetName str., XX, Room Number (Unit Name)",
+      "locationId": "4000741400001993609",
+      "email": "John_Doe@epam.com",
+      "phone": null,
+      "unitName": ".NET & Front-End Lab, Kharkiv",
+      "unitId": "4060741400008848514",
+      "manager": "John Doe",
+      "reporter": "John Doe",
+      "workstation": "TC STUDENT",
+      "hireDate": "06-Oct-2015",
+      "preAcquisitionStartDate": null,
+      "jobFunction": "Students",
+      "primarySkill": {
+        "id": "4060741400007923316",
+        "name": "Front-End"
+      },
+      "remoteWorkPossibilityId": null
+    }
+  }
+]
